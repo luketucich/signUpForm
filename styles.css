@@ -5,18 +5,22 @@ main, body {
     flex-direction: row;
 }
 
-:root{
+*{
     font-family:'Poppins', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
     font-size: 16px;
     color: #1A1A1A;
 }
+
 #leftSide, #rightSide{
     display: flex;
     flex-direction: column;
 }
 
 #leftSide {
-    width: 40vw;
+    width: 50vw;
     min-height: 100vh;
     /* flex: 1; */
 }
@@ -32,33 +36,71 @@ main, body {
     object-fit: cover;
 }
 
+#bgVideo{
+    position: absolute;
+    opacity: 25%;
+    height: 100%;
+    width: 40vw;
+    z-index: 1; /* Places the video behind the content */
+    mix-blend-mode: screen; /* Adjust blend mode as needed */
+}
+
 .section{
     padding: 2em;
 }
 
 #sectionOne{
-    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #sectionTwo{
     background-color: #ffffff;
     filter: drop-shadow(0px 10px 10px);
-}
-
-#sectionThree{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-button{
-    width: 10rem;
+#sectionThree{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+         
+button {
+    background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+    margin: 10px;
+    padding: 15px 40%;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 500;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+  }
+
+button:hover{
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+cursor: grab;
+}
+ 
 
 form {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .formGroup {
@@ -68,10 +110,34 @@ form {
 }
 
 input{
-    width: 12rem;
+}
+
+h1{
+    font-size: 2rem; 
 }
 
 h2{
-    font-size: 1rem;
+    font-size: 1.5rem;
+}
+
+#perksContainer{
+    display: flex;
+}
+
+p{
+    background-color: #e1e1e1;
+    margin: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(0, 0, 0);            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+p:hover{
+    cursor: grab;
 }
    
