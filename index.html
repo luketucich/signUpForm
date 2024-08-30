@@ -42,7 +42,7 @@
         <!-- Form -->
         <div class="section" id="sectionTwo">
                 <h2 id="callToAction">Join today</h2>
-                <form>
+                <form action="#" method="get">
                     <div class="formGroup">
                         <label for="first_name">First Name</label>
                         <input required type="text" id="first_name" placeholder="Walter">
@@ -60,26 +60,27 @@
 
                     <div class="formGroup">
                         <label for="phone_number">Phone Number</label>
-                        <input required type="tel" id="phone_numbe" placeholder="505-117-8987">
+                        <input required type="tel" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="505-117-8987">
                     </div>
 
                     <div class="formGroup">
-                        <label for="last">Password</label>
-                        <input required type="password" id="last_name" placeholder="ScienceRulez3459">
+                        <label for="password">Password</label>
+                        <input required type="password" id="password" placeholder="Science8" pattern="(?=.*[A-Z])(?=.*\d).{8,}" >
                     </div>
 
                     <div class="formGroup">
                         <label for="confirm_password">Confirm Password</label>
-                        <input required type="password" id="confirm_password" placeholder="ScienceRulez3459" minlength="8" maxlength="20">
+                        <input required type="password" id="confirm_password" placeholder="Science8"  oninput="this.setCustomValidity(this.value !== document.getElementById('password').value ? 'Passwords do not match.' : '')">
                     </div>
-                </form>
         </div>
         
         <!-- Submit section -->
          <div class="section" id="sectionThree">
-            <button>Create Account</button>
+            <button type="submit">Create Account</button>
             <h4>Already have an account? <a href="index.html">Log in</a></h4>
         </div>
+    </form>
+
     </div>
     </main>
 </body>
