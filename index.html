@@ -14,9 +14,16 @@
     <main>
     <!-- Left side-->
     <div id="leftSide">
-        <div id="banner"></div>
+        <div id="banner">
+            <div id="rectangle"></div>
+            <div id="logo">Company Name</div>
+        </div>
         <video src="stars.mp4" autoplay loop muted id="bgVideo"></video>
         <img src="background.jpg" alt="Northern Lights" id="bgImage">
+        <div id="creditsContainer">
+            <p id="credits">Video from <a href="https://stock.adobe.com/contributor/202260180/benchart?load_type=author&prev_url=detail">@benchart</a> on Adobe Stock</p>
+            <p id="credits">Photo from <a href="https://unsplash.com/@marceloquinan">@marceloquinan</a> on Unsplash</p>
+        </div>
     </div>
 
     <!-- Right side -->
@@ -25,9 +32,9 @@
         <div class="section" id="sectionOne">
             <h1>Stay updated!</h1>
             <div id="perksContainer">
-                <p>🛠️ Exclusive Content</p>
-                <p>🎁 Special Offers</p>
-                <p>✨ And much more!</p>
+                <p id="perks">🛠️ Exclusive Content</p>
+                <p id="perks">🎁 Special Offers</p>
+                <p id="perks">✨ And much more!</p>
             </div>
 
         </div>
@@ -38,32 +45,32 @@
                 <form>
                     <div class="formGroup">
                         <label for="first_name">First Name</label>
-                        <input type="text" id="first_name" placeholder="Walter">
+                        <input required type="text" id="first_name" placeholder="Walter">
                     </div>
 
                     <div class="formGroup">
                         <label for="last">Last Name</label>
-                        <input type="text" id="last_name" placeholder="White">
+                        <input required type="text" id="last_name" placeholder="White">
                     </div>
 
                     <div class="formGroup">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="heisenberg@email.com">
+                        <input required type="email" id="email" placeholder="heisenberg@email.com">
                     </div>
 
                     <div class="formGroup">
                         <label for="phone_number">Phone Number</label>
-                        <input type="tel" id="phone_numbe" placeholder="505-117-8987">
+                        <input required type="tel" id="phone_numbe" placeholder="505-117-8987">
                     </div>
 
                     <div class="formGroup">
                         <label for="last">Password</label>
-                        <input type="password" id="last_name" placeholder="ScienceRulez3459">
+                        <input required type="password" id="last_name" placeholder="ScienceRulez3459">
                     </div>
 
                     <div class="formGroup">
                         <label for="confirm_password">Confirm Password</label>
-                        <input type="password" id="confirm_password" placeholder="ScienceRulez3459">
+                        <input required type="password" id="confirm_password" placeholder="ScienceRulez3459" minlength="8" maxlength="20">
                     </div>
                 </form>
         </div>

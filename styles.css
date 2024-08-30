@@ -12,6 +12,9 @@ main, body {
 :root{
     font-size: 16px;
     color: #1A1A1A;
+    --color-success: #348F50;
+    --color-invalid: #c5393e;
+    --color-focus: #56B4D3;
 }
 
 #leftSide, #rightSide{
@@ -19,16 +22,35 @@ main, body {
     flex-direction: column;
 }
 
+/* Left side styling */
 #leftSide {
+    position: relative;
     width: 50vw;
     min-height: 100vh;
     /* flex: 1; */
 }
 
 #banner {
-    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 4rem;
+}
+
+#logo{
+    position: absolute;
+    color: white;
+    font-size: calc(1rem + 2vw);
+    font-weight: 600;
+    z-index: 3;
+}
+#rectangle {
     background-color: black;
-    width: 100%;
+    width: 50vw;
+    height: 7rem;
+    z-index: 2;
+    opacity: 40%;
 }
 
 #bgImage {
@@ -38,17 +60,48 @@ main, body {
 
 #bgVideo{
     position: absolute;
-    opacity: 25%;
+    opacity: 30%;
     height: 100%;
     width: 40vw;
     z-index: 1; /* Places the video behind the content */
     mix-blend-mode: screen; /* Adjust blend mode as needed */
 }
 
+#creditsContainer {
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: inherit;
+    position: absolute;
+    bottom: .5rem;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    gap: .1rem;
+    opacity: 75%;
+}
+
+#credits {
+    padding: 0;
+    margin: 0;
+    font-size: .5rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+a{
+    color: #56B4D3;
+}
+/*  */
+
 .section{
     padding: 2em;
 }
 
+/* Section One Styling */
 #sectionOne{
     display: flex;
     flex-direction: column;
@@ -56,6 +109,33 @@ main, body {
     align-items: center;
 }
 
+h1{
+    font-size: 2rem; 
+}
+
+#perksContainer{
+    display: flex;
+}
+
+#perks{
+    background-color: #e1e1e1;
+    margin: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(0, 0, 0);            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+#perks:hover{
+    cursor: grab;
+}
+/*  */
+
+/* Section Two Styling */
 #sectionTwo{
     background-color: #ffffff;
     filter: drop-shadow(0px 10px 10px);
@@ -65,6 +145,42 @@ main, body {
     justify-content: center;
 }
 
+
+h2{
+    font-size: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 75%;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+}
+
+label{
+    font-size: .75rem;
+}
+
+input:user-valid{
+    outline-color: var(--color-success);
+}
+
+/* input:focus{
+    outline-color: var(--color-focus);
+} */
+
+input:user-invalid{
+    outline-color: var(--color-invalid);
+}
+/*  */
+
+/* Section Three Styling */
 #sectionThree{
     display: flex;
     flex-direction: column;
@@ -95,49 +211,6 @@ color: #fff;
 text-decoration: none;
 cursor: grab;
 }
- 
+/*  */
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
 
-.formGroup {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 45%;
-}
-
-input{
-}
-
-h1{
-    font-size: 2rem; 
-}
-
-h2{
-    font-size: 1.5rem;
-}
-
-#perksContainer{
-    display: flex;
-}
-
-p{
-    background-color: #e1e1e1;
-    margin: 10px;
-    padding: 10px 10px;
-    text-align: center;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: rgb(0, 0, 0);            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-}
-
-p:hover{
-    cursor: grab;
-}
-   
